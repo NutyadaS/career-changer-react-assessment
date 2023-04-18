@@ -1,6 +1,7 @@
 import React from "react";
-import { useEffect } from "react";
+import Layout from "./Layout";
 import { useState } from "react";
+import { useEffect } from "react";
 
 const Admin = (props) => {
   const [name, setName] = useState("");
@@ -17,6 +18,13 @@ const Admin = (props) => {
       props.setEmployees([...props.employees, newEmployee]);
     }
   };
+
+  // const deleteUser = (index) => {
+  //     const deleteList = [...props.employees];
+  //     deleteList.splice(index, 1)
+  //     props.setEmployees(...deleteList)
+
+  // }
 
   return (
     <>

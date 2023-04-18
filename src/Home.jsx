@@ -76,7 +76,9 @@ const Home = () => {
       <button onClick={handleClickUser}>User Home Sector</button>
       <button onClick={handleClickAdmin}>Admin Home Sector</button>
       {sector === "user" && <User employees={employees} />}
-      {sector === "admin" && <Admin employees={employees} />}
+      {sector === "admin" && (
+        <Admin employees={employees} setEmployees={setEmployees} />
+      )}
     </Layout>
   );
 };

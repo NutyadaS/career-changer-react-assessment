@@ -24,7 +24,7 @@ const User = (props) => {
     <table>
       <tr>
         <th>Name</th>
-        <th>Last name</th>
+        <th>Last Name</th>
         <th>Position</th>
       </tr>
       {props.employees.map((item) => {
