@@ -66,9 +66,9 @@ const Home = () => {
     <Layout>
       <h1>Generation Thailand</h1>
       {sector === "user" ? (
-        <h1>User</h1>
+        <h1>Home - User Sector</h1>
       ) : sector === "admin" ? (
-        <h1>Admin</h1>
+        <h1>Home - Admin Sector</h1>
       ) : (
         <h1>React - Assessment</h1>
       )}

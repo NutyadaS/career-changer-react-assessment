@@ -24,14 +24,14 @@ const User = (props) => {
     <table>
       <tr>
         <th>Name</th>
-        <th>Full name</th>
+        <th>Last name</th>
         <th>Position</th>
       </tr>
       {props.employees.map((item) => {
         return (
           <tr>
             <td>{item.name}</td>
-            <td>{item.fullname}</td>
+            <td>{item.lastname}</td>
             <td>{item.position}</td>
           </tr>
         );
