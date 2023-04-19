@@ -1,12 +1,12 @@
 import React from "react";
-import "./Styles.css";
+// import "./Styles.css";
 
 const Navbar = () => {
   return (
     <>
       <ul>
         <li>
-          <a href={"/"}>Home</a>
+          <a href={"/home"}>Home</a>
         </li>
         <li>
           <a href={"/owner"}>Owner</a>

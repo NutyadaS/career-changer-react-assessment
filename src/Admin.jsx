@@ -19,12 +19,17 @@ const Admin = (props) => {
     }
   };
 
-  // const deleteUser = (index) => {
-  //     const deleteList = [...props.employees];
-  //     deleteList.splice(index, 1)
-  //     props.setEmployees(...deleteList)
+  const deleteUser = (index) => {
+    const deleteList = [...props.employees];
+    deleteList.splice(index, 1);
+    props.setEmployees(deleteList);
+  };
 
-  // }
+  const deleteAll = (index) => {
+    const deleteAllList = [...props.employees];
+    deleteAllList.splice(index);
+    props.setEmployees(deleteAllList);
+  };
 
   return (
     <>
@@ -63,20 +68,20 @@ const Admin = (props) => {
           <th>Position</th>
           <th>Action</th>
         </tr>
-        {props.employees.map((item) => {
+        {props.employees.map((item, index) => {
           return (
-            <tr>
+            <tr key={index}>
               <td>{item.name}</td>
               <td>{item.lastname}</td>
               <td>{item.position}</td>
               <td>
-                <button>Delete</button>
+                <button onClick={() => deleteUser(index)}>Delete</button>
               </td>
-              {/* <td><button onClick={deleteUser}>Delete</button></td> */}
             </tr>
           );
         })}
       </table>
+      <button onClick={deleteAll}>Delete All</button>
     </>
   );
 };

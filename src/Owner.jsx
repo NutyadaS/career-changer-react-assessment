@@ -7,9 +7,9 @@ const Owner = () => {
       <div>
         <h1>Mai - Group A - 27</h1> <br />
         <img
-          width="270px"
-          height="221px"
-          src="https://cdn.pixabay.com/photo/2017/11/14/13/06/kitty-2948404__480.jpg"
+          width="150px"
+          height="150px"
+          src="https://media.licdn.com/dms/image/D5603AQEakvKvjmMEYQ/profile-displayphoto-shrink_800_800/0/1670615376743?e=1687392000&v=beta&t=gm4LUEagelEU-oNKgjYnOGwfaz7Ncpjvppl4XtMkSyU"
         />{" "}
         <br />
         <br />
