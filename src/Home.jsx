@@ -2,6 +2,7 @@ import Layout from "./Layout";
 import React, { useState } from "react";
 import User from "./User";
 import Admin from "./Admin";
+import "./Home.css";
 
 const mockEmployees = [
   {
@@ -74,7 +75,11 @@ const Home = () => {
       )}
 
       <button onClick={handleClickUser}>User Home Sector</button>
+      <br />
+      <br />
       <button onClick={handleClickAdmin}>Admin Home Sector</button>
+      <br />
+      <br />
       {sector === "user" && <User employees={employees} />}
       {sector === "admin" && (
         <Admin employees={employees} setEmployees={setEmployees} />

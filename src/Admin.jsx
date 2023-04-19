@@ -2,11 +2,13 @@ import React from "react";
 import Layout from "./Layout";
 import { useState } from "react";
 import { useEffect } from "react";
+import "./Admin.css";
 
 const Admin = (props) => {
   const [name, setName] = useState("");
   const [lastname, setLastname] = useState("");
   const [position, setPosition] = useState("");
+  // const [inputV, setInputV] = useState("");
 
   const createUser = () => {
     if (name !== " " && lastname !== "" && position !== "") {
@@ -18,6 +20,14 @@ const Admin = (props) => {
       props.setEmployees([...props.employees, newEmployee]);
     }
   };
+
+  // const handleUserInput = (event) => {
+  //   setInputV(event.target.value);
+  // };
+
+  // const resetInputField = () => {
+  //   setInputV("");
+  // };
 
   const deleteUser = (index) => {
     const deleteList = [...props.employees];
@@ -31,10 +41,17 @@ const Admin = (props) => {
     props.setEmployees(deleteAllList);
   };
 
+  useEffect(() => {
+    setName("");
+    setLastname("");
+    setPosition("");
+  }, [props.employees]);
+
   return (
     <>
-      <div>
+      <div class="container">
         <label>Create User Here</label>
+        <br />
         <input
           onChange={(event) => {
             setName(event.target.value);
@@ -59,8 +76,10 @@ const Admin = (props) => {
           type="text"
           placeholder="Position"
         />
+        <br />
         <button onClick={createUser}>Save</button>
       </div>
+      <br />
       <table>
         <tr>
           <th>Name</th>
